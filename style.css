@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #e8ecf5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #222a40;
+  background: #10172a;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+select,
+button {
+  background: #18213a;
+  color: #ffffff;
+  border: 1px solid #303b5c;
+  border-radius: 6px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+button:hover,
+button.active {
+  background: #26365d;
+}
+
+.status {
+  padding: 10px 14px;
+  color: #aeb9d5;
+  font-size: 13px;
+}
+
+#chart {
+  height: 620px;
+  margin: 0 12px;
+  border: 1px solid #222a40;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.activity {
+  display: flex;
+  gap: 12px;
+  padding: 14px 12px;
+}
+
+.activity > div {
+  flex: 1;
+  background: #111a30;
+  border: 1px solid #27314b;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.activity span {
+  display: block;
+  color: #aeb9d5;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.activity strong {
+  font-size: 22px;
+}
+
+.note {
+  padding: 0 14px 18px;
+  color: #7885a5;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  #chart {
+    height: 480px;
+  }
+
+  .activity {
+    flex-direction: column;
+  }
+}
