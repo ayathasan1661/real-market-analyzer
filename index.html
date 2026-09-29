@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Real Market Analyzer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Real Market Analyzer</h1>
+
+    <div class="controls">
+
+      <select id="symbol">
+        <option value="EUR/USD">EUR/USD</option>
+        <option value="GBP/USD">GBP/USD</option>
+        <option value="USD/JPY">USD/JPY</option>
+        <option value="AUD/USD">AUD/USD</option>
+        <option value="USD/CAD">USD/CAD</option>
+        <option value="USD/CHF">USD/CHF</option>
+        <option value="NZD/USD">NZD/USD</option>
+        <option value="XAU/USD">XAU/USD Gold</option>
+      </select>
+
+      <button data-tf="1min">1m</button>
+      <button data-tf="5min">5m</button>
+      <button data-tf="15min">15m</button>
+      <button data-tf="1h">1H</button>
+      <button data-tf="4h">4H</button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="status" id="status">
+      Market Analyzer Starting...
+    </div>
+
+    <div id="chart"></div>
+
+
+    <section class="activity">
+
+      <div>
+        <span>Buyer Activity</span>
+        <strong id="buyer">--%</strong>
+      </div>
+
+      <div>
+        <span>Seller Activity</span>
+        <strong id="seller">--%</strong>
+      </div>
+
+    </section>
+
+
+    <p class="note">
+      Buyer/Seller values are analytical indicators and are not guaranteed predictions.
+    </p>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
